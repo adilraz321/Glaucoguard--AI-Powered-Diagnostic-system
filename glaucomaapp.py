@@ -8,7 +8,7 @@ from fpdf import FPDF
 from google import genai
 
 # Initialize Google Gemini API
-API_KEY = 'AIzaSyBk7I1xNJ5zeunPPoqFN4rtbwmJYfyeMKQ'
+API_KEY = ''
 client = genai.Client(api_key=API_KEY)
 
 def get_gemini_response(user_query):
@@ -118,6 +118,7 @@ user_query = st.sidebar.text_input("Ask me anything about glaucoma:")
 if user_query:
     chatbot_reply = get_gemini_response(user_query)
     st.sidebar.write(f"🤖 {chatbot_reply}")
+
 
 
 
