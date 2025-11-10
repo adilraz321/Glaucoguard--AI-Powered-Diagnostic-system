@@ -47,9 +47,12 @@ pip install -r requirements.txt
 
 # Run the Streamlit application
 streamlit run app.py
+
 📈 Model & Interpretability
 The primary challenge in this project was building a model that was not only accurate but also trustworthy.
 
 Diagnosis: The CNN model processes a given fundus image and classifies it as 'Glaucoma' or 'Normal' with a 97% accuracy rate.
 
 Interpretability (Grad-CAM): To validate the model's prediction, a Grad-CAM heatmap is generated. This visualization highlights the specific areas of the optic disc and cup that the model used to make its decision, confirming that its diagnosis is based on genuine medical biomarkers.
+
+
