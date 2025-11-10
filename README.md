@@ -1,1 +1,1 @@
-# Automated-Glaucoma-Detector
+# GlaucoGuard- 'An AI Powered Diagnostic System'
