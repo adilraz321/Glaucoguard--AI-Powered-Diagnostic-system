@@ -1,0 +1,61 @@
+# Automated Glaucoma Detection System Documentation
+
+## 1. Introduction
+Glaucoma is a progressive eye disease that damages the optic nerve, potentially leading to permanent blindness if left undiagnosed. Early detection is crucial for preventing severe vision loss. This project aims to build an **Automated Glaucoma Detection System** using **deep learning** and **computer vision**, enabling faster, more accessible screening through retinal fundus images.
+
+## 2. Objectives
+- **Early detection of glaucoma** using fundus images.
+- **Provide a confidence score** for the prediction.
+- **Generate a detailed medical report** (PDF) including fundus images, heatmaps, and advice.
+- **Integrate a chatbot** to answer user queries related to glaucoma.
+
+## 3. Dataset Overview
+The dataset consists of labeled retinal fundus images, categorized into **Healthy** and **Glaucoma Detected** classes.
+- **Input:** Fundus images (100x100 pixels).
+- **Classes:** 0 (Healthy), 1 (Glaucoma).
+- **Preprocessing:** Image resizing, normalization, and data augmentation (rotation, zoom, shear, flip).
+
+## 4. Model Architecture
+The deep learning model is a **Convolutional Neural Network (CNN)** built in TensorFlow/Keras.
+### **Key Layers:**
+- **Conv2D layers:** Extracts spatial features (edges, blood vessels, optic cup).
+- **Batch Normalization:** Stabilizes training.
+- **Activation (ReLU):** Introduces non-linearity.
+- **MaxPooling2D:** Downsamples feature maps.
+- **Dropout:** Prevents overfitting.
+- **Dense Layers:** Fully connected for final prediction.
+- **Sigmoid Activation:** Outputs probability of glaucoma.
+
+## 5. Application Workflow
+The application is built with **Streamlit** for an interactive user experience. The process:
+1. **User uploads fundus images**.
+2. **Model predicts** whether the eye is healthy or glaucomatous.
+3. **Heatmap (Grad-CAM)** highlights regions influencing the prediction.
+4. **PDF Report** is generated with images, heatmaps, and medical advice.
+5. **Chatbot (Google Gemini API)** answers user questions about glaucoma.
+
+## 6. Technologies Used
+- **TensorFlow/Keras:** Model building & training.
+- **Streamlit:** User interface.
+- **OpenCV:** Image processing.
+- **PIL (Pillow):** Image handling.
+- **FPDF:** PDF generation.
+- **Google Gemini API:** Chatbot integration.
+
+## 7. Results & Evaluation
+- **Training Accuracy:** Achieved during model training.
+- **Heatmaps:** Visual explanations of the model’s decision.
+- **Confidence Score:** Included in the prediction.
+- **PDF Report:** Includes fundus images, heatmaps, and health advice.
+
+## 8. Conclusion & Future Scope
+- **Conclusion:** The app successfully detects glaucoma from fundus images, provides visual insights, and generates a medical report.
+- **Future Improvements:**
+  - **Mobile app integration** for on-the-go diagnosis.
+  - **Enhanced model accuracy** with larger datasets.
+  - **Multi-disease detection** (diabetic retinopathy, cataracts).
+  - **Real-time video analysis** for faster screening.
+
+---
+This documentation outlines the complete development and functionality of the **Automated Glaucoma Detection System**. It highlights the model architecture, application workflow, and future possibilities for improvement.
+
